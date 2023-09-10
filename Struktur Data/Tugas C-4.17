@@ -1,15 +1,12 @@
 def is_palindrome(s):
-    # Basis case: jika panjang string kurang dari atau sama dengan 1, itu adalah palindrom
     if len(s) <= 1:
         return True
-    # Memeriksa apakah karakter pertama dan terakhir sama
     if s[0] == s[-1]:
-        # Memanggil fungsi is_palindrome pada potongan tengah string
         return is_palindrome(s[1:-1])
     else:
         return False
 
-# Contoh penggunaan
+# Contoh penggunaan pada soal
 string_1= "racecar"
 if is_palindrome(string_1):
     print(f"'{string_1}' adalah palindrom.")
